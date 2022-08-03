@@ -2,11 +2,11 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <div>
+        <React.Fragment>
             <hr/>
             <center><h3>&copy;Chatashali</h3>
             </center>
-        </div>
+        </React.Fragment>
     )
 }
 

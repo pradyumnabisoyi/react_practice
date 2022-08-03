@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import  ReactDOM  from 'react-dom';
 import Header from './component/Header';
 import Footer from './component/Footer';
@@ -6,7 +6,7 @@ import './index.css';
 
 const App = () => {
     return (
-        <div>
+        <Fragment>
             <Header />
             <div className="App">
                 <center>
@@ -18,7 +18,7 @@ const App = () => {
                 
             </div>
             <Footer />
-        </div>
+        </Fragment>
     
     )
 }
