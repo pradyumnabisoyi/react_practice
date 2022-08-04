@@ -16,7 +16,7 @@ class App extends Component {
                         </p>
                     </center>
                 </div>
-                <Footer />
+                <Footer year='2022' author='Pradyumna'/>
             </Fragment>
         )
     }
