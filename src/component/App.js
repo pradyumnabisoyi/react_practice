@@ -1,21 +1,22 @@
 import React, {Fragment, Component} from 'react';
 import Header from './Header';
 import Footer from './Footer';
-import '../index.css';
+import ProductDisplay from './ProductDisplay';
+import JSON from './db.json';
 
 class App extends Component {
+    constructor() {
+        super();
+        this.state = {
+            products: JSON
+        };
+    }
+
     render () {
         return (
             <Fragment>
                 <Header />
-                <div className="App">
-                    <center>
-                        <h1>Welcome to ReactJS</h1>
-                        <p>
-                            This is an example of how you can build your app using React.
-                        </p>
-                    </center>
-                </div>
+                <ProductDisplay products={this.state.products}/>
                 <Footer year='2022' author='Pradyumna'/>
             </Fragment>
         )
