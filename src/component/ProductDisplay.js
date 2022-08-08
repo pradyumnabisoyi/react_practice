@@ -5,7 +5,7 @@ const ProductDisplay = (props) => {
     console.log(props);
     const renderproducts = props.products.map((element) => {
             return (
-                <div className='card'>
+                <div className='card' key={element.id}>
                     <img src={element.image} alt={element.name} /> 
                     {element.name}
                 </div>

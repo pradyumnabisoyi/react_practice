@@ -8,15 +8,24 @@ class App extends Component {
     constructor() {
         super();
         this.state = {
-            products: JSON
+            products: JSON,
+            filteredData: JSON
         };
+    }
+
+    filterdata = (searchName) => {
+        console.log(searchName)
+        let output = this.state.products.filter(i => {
+            return (i.name.toLowerCase().indexOf(searchName.toLowerCase()) > -1)
+        })
+        this.setState({filteredData: output})
     }
 
     render () {
         return (
             <Fragment>
-                <Header userInput={(data) => {console.log('inside app ', data)}}/>
-                <ProductDisplay products={this.state.products}/>
+                <Header userInput={(data) => {this.filterdata(data)}}/>
+                <ProductDisplay products={this.state.filteredData}/>
                 <Footer year='2022' author='Pradyumna'/>
             </Fragment>
         )
