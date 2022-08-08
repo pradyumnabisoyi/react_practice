@@ -11,6 +11,7 @@ class   Header extends React.Component {
     setMessage = (event) => {
         //console.log(event.target.value)
         this.setState({message:event.target.value? event.target.value : 'User Text Here'})
+        this.props.userInput(event.target.value)
     }
     render () {
         const mystyle = {

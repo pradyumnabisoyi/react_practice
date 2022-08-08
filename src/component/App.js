@@ -15,7 +15,7 @@ class App extends Component {
     render () {
         return (
             <Fragment>
-                <Header />
+                <Header userInput={(data) => {console.log('inside app ', data)}}/>
                 <ProductDisplay products={this.state.products}/>
                 <Footer year='2022' author='Pradyumna'/>
             </Fragment>
