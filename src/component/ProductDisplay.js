@@ -1,19 +1,21 @@
 import React from 'react';
-import '../index.css';
+import "../index.css";
 
 const ProductDisplay = (props) => {
     console.log(props);
+    const renderproducts = props.products.map((element) => {
+            return (
+                <div className='card'>
+                    <img src={element.image} alt={element.name} /> 
+                    {element.name}
+                </div>
+            )
+        }
+    )
     return (
-        <div className="App">
-            <center>
-                <h1>Welcome to ReactJS</h1>
-                <p>
-                    This is an example of how you can build your app using React.
-                </p>
-            </center>
+        <div>
+            {renderproducts}
         </div>
     )
-        
 }
-
 export default ProductDisplay;

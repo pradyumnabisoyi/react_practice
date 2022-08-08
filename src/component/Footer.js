@@ -1,12 +1,15 @@
 import React from 'react';
+import "../index.css";
 
 const Footer = (props) => {
     //console.log(props)
     return (
         <React.Fragment>
-            <hr/>
-            <center><h3>&copy;Chatashali - {props.year} | Author:{props.author}</h3>
-            </center>
+            <footer className="footer-container">
+                <hr />
+                <center><h3>&copy;Chatashali - {props.year} | Author:{props.author}</h3>
+                </center>
+            </footer>
         </React.Fragment>
     )
 }
