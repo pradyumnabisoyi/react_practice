@@ -7,13 +7,18 @@ const ProductDisplay = (props) => {
             return (
                 <div className='card' key={element.id}>
                     <img src={element.image} alt={element.name} /> 
-                    {element.name}
+                    <div>
+                    <h3>{element.name}</h3>
+                    <p>{element.description}</p>
+                    <p>Rs.{element.cost}</p>
+                    <p>{element.uses}</p>
+                </div>
                 </div>
             )
         }
     )
     return (
-        <div>
+        <div className='main'>
             {renderproducts}
         </div>
     )
